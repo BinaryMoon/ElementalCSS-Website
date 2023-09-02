@@ -1,0 +1,339 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFED66" />
+<meta name="color-scheme" content="dark light" />
+<meta name="view-transition" content="same-origin" />
+
+<link rel="stylesheet" href="/assets/styles.css?dc=2309012130" />
+
+<link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" />
+<link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/assets/images/favicon-180.png" />
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Typography Utilities | ElementalCSS</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Typography Utilities" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simple CSS" />
+<meta property="og:description" content="Simple CSS" />
+<link rel="canonical" href="http://localhost:4000/docs/utility-css/typography/" />
+<meta property="og:url" content="http://localhost:4000/docs/utility-css/typography/" />
+<meta property="og:site_name" content="ElementalCSS" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Typography Utilities" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Simple CSS","headline":"Typography Utilities","url":"http://localhost:4000/docs/utility-css/typography/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ElementalCSS" />
+
+
+
+<body>
+
+	<header class="flex flex-ai-c gap4 flex-wrap flex-j-sb m-b5 b-b p4">
+
+	<a href="/" class="p-r0 flex-g1" rel="home">
+		<img class="mw2" src="/assets/images/logo.svg" width="100" height="100" title="Elemental CSS Logo" />
+	</a>
+
+	<h1 class="f-s4 m0 flex-g1 a-srt">
+		<a class="p3 t-td-n" href="/" rel="home"></a>
+	</h1>
+
+	<nav class="flex gap4">
+
+		<a href="/docs/">Docs</a>
+		<a href="/components/">Components</a>
+
+	</nav>
+
+	<form class="flex-g1">
+		<input id="userinput" class="w100p" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+		<div id="suggestions"></div>
+	</form>
+
+	<nav class="flex gap4">
+		<a href="https://mastodon.social/@binarymoon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16">
+  <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+</svg><span class="screen-reader-text">Mastodon</span></a>
+		<a href="https://github.com/BinaryMoon/ElementalCSS"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg><span class="screen-reader-text">Github</span></a>
+	</nav>
+
+</header>
+
+
+	<div class="m-auto mw7 p3">
+
+		<div class="m-b5">
+			<header class="m-b5">
+	<h1>Typography Utilities</h1>
+</header>
+
+
+
+
+<section class="grid t:grid-cols4">
+	<nav>
+		<h3 class="f5 m0 t-tt-u">Getting Started</h3>
+		<ul class="m-b4 f6">
+			<li><a href="/docs/">Introduction</a></li>
+			<li><a href="/docs/getting-started/">Getting Started</a></li>
+			<li><a href="/docs/usage/">Usage</a></li>
+			<li><a href="/docs/command-line/">Command Line</a></li>
+			<li><a href="/docs/custom-properties/">Custom Properties</a></li>
+		</ul>
+		<h3 class="f5 m0 t-tt-u">Classless HTML</h3>
+		<ul class="m-b4 f6">
+			<li><a href="/docs/html/typography/">Typography</a></li>
+			<li><a href="/docs/html/forms/">Forms</a></li>
+			<li><a href="/docs/html/lists/">Lists</a></li>
+			<li><a href="/docs/html/other/">Other Elements</a></li>
+		</ul>
+		<h3 class="f5 m0 t-tt-u">Utility CSS</h3>
+		<ul class="m-b4 f6">
+			<li><a href="/docs/utility-css/typography/">Typography</a></li>
+			<li><a href="/docs/utility-css/colours/">Colours</a></li>
+		</ul>
+		<h4 class="f5 m0 t-tt-u">Layout</h4>
+		<ul class="m-b4 f6">
+			<li><a href="/docs/utility-css/grid-columns/">Grid Columns</a></li>
+		</ul>
+	</nav>
+	<div class="grid-col-span3">
+		
+
+		
+			
+			
+				<article
+	class="component m-b5 b-br2"
+	id="anchor-font-sizes"
+>
+
+	<header class="m-b3">
+		<h3 class="m0">Font Sizes</h3>
+		
+	</header>
+
+	<div>
+		<div class="component-display b b-br1 p-x4 p-y3">
+			<p class="f1">Font Size 1</p>
+<p class="f2">Font Size 2</p>
+<p class="f3">Font Size 3</p>
+<p class="f4">Font Size 4</p>
+<p class="f5">Font Size 5</p>
+<p class="f6">Font Size 6</p>
+
+		</div>
+
+		<details class="m-t2">
+			<summary class="t-tt-u">Code Example</summary>
+			
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f1"</span><span class="nt">&gt;</span>Font Size 1<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f2"</span><span class="nt">&gt;</span>Font Size 2<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f3"</span><span class="nt">&gt;</span>Font Size 3<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f4"</span><span class="nt">&gt;</span>Font Size 4<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f5"</span><span class="nt">&gt;</span>Font Size 5<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f6"</span><span class="nt">&gt;</span>Font Size 6<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+		</details>
+	</div>
+
+</article>
+
+			
+				<article
+	class="component m-b5 b-br2"
+	id="anchor-font-faces"
+>
+
+	<header class="m-b3">
+		<h3 class="m0">Font Faces</h3>
+		
+	</header>
+
+	<div>
+		<div class="component-display b b-br1 p-x4 p-y3">
+			<p class="f4 flex flex-wrap gap4">
+<span class="font-arial">Arial</span>
+<span class="font-arial-black">Arial Black</span>
+<span class="font-arial-narrow">Arial Narrow</span>
+<span class="font-arial-rounded">Arial Rounded</span>
+<span class="font-baskerville">Baskerville</span>
+<span class="font-book-antiqua">Book Antiqua</span>
+<span class="font-bookman">Bookman</span>
+<span class="font-calibri">Calibri</span>
+<span class="font-cambria">Cambria</span>
+<span class="font-century-gothic">Century Gothic</span>
+<span class="font-comic-sans">Comic Sans</span>
+<span class="font-consolas">Consolas</span>
+<span class="font-courier-new">Courier New</span>
+<span class="font-franklin-gothic">Franklin Gothic</span>
+<span class="font-futura">Futura</span>
+<span class="font-garamond">Garamond</span>
+<span class="font-geneva">Geneva</span>
+<span class="font-georgia">Georgia</span>
+<span class="font-gill-sans">Gill Sans</span>
+<span class="font-helvetica">Helvetica</span>
+<span class="font-haettenschweiler">Haettenschweiler</span>
+<span class="font-hoefler">Hoefler</span>
+<span class="font-impact">Impact</span>
+<span class="font-lucida-bright">Lucida Bright</span>
+<span class="font-lucida-grande">Lucida Grande</span>
+<span class="font-lucida-console">Lucida Console</span>
+<span class="font-oswald">Oswald</span>
+<span class="font-palatino">Palatino</span>
+<span class="font-system">System (Default)</span>
+<span class="font-system-monospace">System Monospace</span>
+<span class="font-tahoma">Tahoma</span>
+<span class="font-times-new-roman">Times New Roman</span>
+<span class="font-trebuchet">Trebuchet</span>
+<span class="font-verdana">Verdana</span>
+</p>
+
+		</div>
+
+		<details class="m-t2">
+			<summary class="t-tt-u">Code Example</summary>
+			
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"f4 flex flex-wrap gap4"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-arial"</span><span class="nt">&gt;</span>Arial<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-arial-black"</span><span class="nt">&gt;</span>Arial Black<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-arial-narrow"</span><span class="nt">&gt;</span>Arial Narrow<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-arial-rounded"</span><span class="nt">&gt;</span>Arial Rounded<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-baskerville"</span><span class="nt">&gt;</span>Baskerville<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-book-antiqua"</span><span class="nt">&gt;</span>Book Antiqua<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-bookman"</span><span class="nt">&gt;</span>Bookman<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-calibri"</span><span class="nt">&gt;</span>Calibri<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-cambria"</span><span class="nt">&gt;</span>Cambria<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-century-gothic"</span><span class="nt">&gt;</span>Century Gothic<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-comic-sans"</span><span class="nt">&gt;</span>Comic Sans<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-consolas"</span><span class="nt">&gt;</span>Consolas<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-courier-new"</span><span class="nt">&gt;</span>Courier New<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-franklin-gothic"</span><span class="nt">&gt;</span>Franklin Gothic<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-futura"</span><span class="nt">&gt;</span>Futura<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-garamond"</span><span class="nt">&gt;</span>Garamond<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-geneva"</span><span class="nt">&gt;</span>Geneva<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-georgia"</span><span class="nt">&gt;</span>Georgia<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-gill-sans"</span><span class="nt">&gt;</span>Gill Sans<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-helvetica"</span><span class="nt">&gt;</span>Helvetica<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-haettenschweiler"</span><span class="nt">&gt;</span>Haettenschweiler<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-hoefler"</span><span class="nt">&gt;</span>Hoefler<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-impact"</span><span class="nt">&gt;</span>Impact<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-lucida-bright"</span><span class="nt">&gt;</span>Lucida Bright<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-lucida-grande"</span><span class="nt">&gt;</span>Lucida Grande<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-lucida-console"</span><span class="nt">&gt;</span>Lucida Console<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-oswald"</span><span class="nt">&gt;</span>Oswald<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-palatino"</span><span class="nt">&gt;</span>Palatino<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-system"</span><span class="nt">&gt;</span>System (Default)<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-system-monospace"</span><span class="nt">&gt;</span>System Monospace<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-tahoma"</span><span class="nt">&gt;</span>Tahoma<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-times-new-roman"</span><span class="nt">&gt;</span>Times New Roman<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-trebuchet"</span><span class="nt">&gt;</span>Trebuchet<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"font-verdana"</span><span class="nt">&gt;</span>Verdana<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+		</details>
+	</div>
+
+</article>
+
+			
+				<article
+	class="component m-b5 b-br2"
+	id="anchor-font-weights"
+>
+
+	<header class="m-b3">
+		<h3 class="m0">Font Weights</h3>
+		
+	</header>
+
+	<div>
+		<div class="component-display b b-br1 p-x4 p-y3">
+			<p class="flex flex-wrap gap4">
+<span class="f-fw100">Font Weight 100</span>
+<span class="f-fw200">Font Weight 200</span>
+<span class="f-fw300">Font Weight 300</span>
+<span class="f-fw400">Font Weight 400</span>
+<span class="f-fw500">Font Weight 500</span>
+<span class="f-fw600">Font Weight 600</span>
+<span class="f-fw700">Font Weight 700</span>
+<span class="f-fw800">Font Weight 800</span>
+<span class="f-fw900">Font Weight 900</span>
+</p>
+
+		</div>
+
+		<details class="m-t2">
+			<summary class="t-tt-u">Code Example</summary>
+			
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"flex flex-wrap gap4"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw100"</span><span class="nt">&gt;</span>Font Weight 100<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw200"</span><span class="nt">&gt;</span>Font Weight 200<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw300"</span><span class="nt">&gt;</span>Font Weight 300<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw400"</span><span class="nt">&gt;</span>Font Weight 400<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw500"</span><span class="nt">&gt;</span>Font Weight 500<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw600"</span><span class="nt">&gt;</span>Font Weight 600<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw700"</span><span class="nt">&gt;</span>Font Weight 700<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw800"</span><span class="nt">&gt;</span>Font Weight 800<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fw900"</span><span class="nt">&gt;</span>Font Weight 900<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+		</details>
+	</div>
+
+</article>
+
+			
+				<article
+	class="component m-b5 b-br2"
+	id="anchor-font-style"
+>
+
+	<header class="m-b3">
+		<h3 class="m0">Font Style</h3>
+		
+		<div class="m0 m-y2 t-ideal-length"><p>These are presentational styles. For semantic styles, use the <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code> tags. For bold use the font weight classes.</p>
+</div>
+		
+	</header>
+
+	<div>
+		<div class="component-display b b-br1 p-x4 p-y3">
+			<p><span class="f-fs-i">Italic text</span> <span class="f-fs-n">Normal text</span></p>
+
+		</div>
+
+		<details class="m-t2">
+			<summary class="t-tt-u">Code Example</summary>
+			
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"f-fs-i"</span><span class="nt">&gt;</span>Italic text<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"f-fs-n"</span><span class="nt">&gt;</span>Normal text<span class="nt">&lt;/span&gt;&lt;/p&gt;</span></code></pre></figure>
+
+		</details>
+	</div>
+
+</article>
+
+			
+		
+	</div>
+</section>
+		</div>
+
+		<footer class="p-y5">
+	<p class="flex flex-wrap gap4 t-tt-u">
+		<span>&copy; 2021 - 2023 <a href="https://www.binarymoon.co.uk/">Binary Moon</a></span>
+		<a href="https://github.com/BinaryMoon/ElementalCSS-Website/">View Website Source</a>
+	</p>
+</footer>
+
+	</div>
+
+</body>

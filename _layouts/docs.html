@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<header class="m-b5">
+	<h1>{{ page.title }}</h1>
+</header>
+
+{% assign headingStyles = 'f5 m0 t-tt-u' %}
+{% assign listStyles = 'm-b4 f6' %}
+
+<section class="grid t:grid-cols4">
+	<nav>
+		<h3 class="{{ headingStyles }}">Getting Started</h3>
+		<ul class="{{ listStyles }}">
+			<li><a href="/docs/">Introduction</a></li>
+			<li><a href="/docs/getting-started/">Getting Started</a></li>
+			<li><a href="/docs/usage/">Usage</a></li>
+			<li><a href="/docs/command-line/">Command Line</a></li>
+			<li><a href="/docs/custom-properties/">Custom Properties</a></li>
+		</ul>
+		<h3 class="{{ headingStyles }}">Classless HTML</h3>
+		<ul class="{{ listStyles }}">
+			<li><a href="/docs/html/typography/">Typography</a></li>
+			<li><a href="/docs/html/forms/">Forms</a></li>
+			<li><a href="/docs/html/lists/">Lists</a></li>
+			<li><a href="/docs/html/other/">Other Elements</a></li>
+		</ul>
+		<h3 class="{{ headingStyles }}">Utility CSS</h3>
+		<ul class="{{ listStyles }}">
+			<li><a href="/docs/utility-css/typography/">Typography</a></li>
+			<li><a href="/docs/utility-css/colours/">Colours</a></li>
+		</ul>
+		<h4 class="{{ headingStyles }}">Layout</h4>
+		<ul class="{{ listStyles }}">
+			<li><a href="/docs/utility-css/grid-columns/">Grid Columns</a></li>
+		</ul>
+	</nav>
+	<div class="grid-col-span3">
+		{% unless page.content == '' %}<div class="f4 t-ideal-length m-b5">{{ content | markdownify }}</div>{% endunless %}
+
+		{% if page.type %}
+			{% assign code = site.code-examples | where: "type", page.type%}
+			{% for entry in code %}
+				{% include code-example.html entry=entry %}
+			{% endfor %}
+		{% endif %}
+	</div>
+</section>

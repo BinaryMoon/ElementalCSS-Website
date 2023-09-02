@@ -1,0 +1,62 @@
+url: "https://elementalcss.com"
+baseurl: "" # the subpath of your site, e.g. /blog
+name: "ElementalCSS"
+description: "Simple CSS"
+twitter_username: binarymoon
+github_username: binarymoon
+
+colour: "#FFED66"
+
+plugins:
+  - jekyll-feed
+  - jekyll-extlinks
+  - jekyll-sitemap
+  - jekyll-image-size
+  # - jekyll-resize
+  - jekyll-seo-tag
+
+extlinks:
+  attributes: { rel: "nofollow noopener noreferrer" }
+  rel_exclude:
+    [
+      "binarymoon.co.uk",
+      "brush.ninja",
+      "wpbriefs.com",
+      "prothemedesign.com",
+      "www.binarysun.co.uk",
+    ]
+
+collections_dir: collections
+
+collections:
+  code-examples:
+    output: false
+
+safe: false
+
+pagination:
+  enabled: true
+  per_page: 21
+  permalink: "/page/:num/"
+  title: ":title - page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+permalink: /writing/:title/
+
+include:
+  - .htaccess
+  - _pages
+
+collections_dir: collections
+
+exclude:
+  - deploy.sh
+  - deploy-full.sh
+  - Gemfile
+  - README.md
+  - Gemfile.lock

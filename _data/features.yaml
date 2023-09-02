@@ -1,0 +1,12 @@
+- name: Quick to load
+  description: ElementalCSS is just 43.4kb minified and 7.4kb gzipped. No need to use PurgeCSS or similar.
+- name: Quick to use
+  description: No build process. ElementalCSS is so small that it's not necessary, but the files are there if you want them.
+- name: Easy to Use
+  description: Include the CSS and get designing. The default classless styles make your page look great, and utility classes add extra style.
+- name: Custom Properties
+  description: Many settings can be changed without touching the CSS by using CSS Custom Properties.
+- name: Dark mode
+  description: Built in support for a dark theme that 'just works', and looks beautiful (this site uses the default colours).
+- name: Multiple Builds
+  description: Different CSS files are available so you can use the smaller classless styles on their own, or use the full package.

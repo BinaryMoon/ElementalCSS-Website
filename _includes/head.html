@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="{{ page.background | default: '#FFED66' }}" />
+<meta name="color-scheme" content="dark light" />
+<meta name="view-transition" content="same-origin" />
+
+<link rel="stylesheet" href="/assets/styles.css?dc={{ site.time | date: '%y%m%d%k%M' }}" />
+
+<link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" />
+<link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/assets/images/favicon-180.png" />
+
+{% seo %}
+{% feed_meta %}
+{% include analytics.html %}
