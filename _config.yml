@@ -62,3 +62,6 @@ exclude:
   - Gemfile
   - README.md
   - Gemfile.lock
+  - elementalcss.code-workspace
+  - _config.yml
+  - .gitignore
