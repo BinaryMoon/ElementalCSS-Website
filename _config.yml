@@ -33,6 +33,17 @@ collections_dir: collections
 collections:
   code-examples:
     output: false
+  showcase:
+    output: true
+    permalink: /showcase/:title/
+    sort_by: date
+    sort_reverse: true
+
+defaults:
+  - scope:
+      type: "showcase" # previously `post` in Jekyll 2.2.
+    values:
+      layout: showcase
 
 safe: false
 
