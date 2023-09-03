@@ -7,6 +7,10 @@ layout: page
 		<p><a href="{{ page.website }}" class="btn">Visit {{ page.title }} &rarr;</a></p>
 	</div>
 	<div class="d:grid-col-span2">
-		<img src="https://s.wordpress.com/mshots/v1/{{ page.website | uri_escape }}" alt="{{ page.title }} screenshot" class="b-br1" />
+		<img
+			src="https://s.wordpress.com/mshots/v1/{{ page.website | replace: "https://", "" | uri_escape }}"
+			alt="{{ page.title }} screenshot"
+			class="b-br1"
+		/>
 	</div>
 </div>

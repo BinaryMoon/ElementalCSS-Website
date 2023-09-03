@@ -4,8 +4,9 @@
 		class="display-block"
 	>
 		<img
-			src="https://s.wordpress.com/mshots/v1/{{ post.website | uri_escape }}"
+			src="https://s.wordpress.com/mshots/v1/{{ post.website | replace: "https://", "" | uri_escape }}?w=350"
 			alt="{{ post.title }} screenshot"
+			loading="lazy"
 			class="b-br1"
 		/>
 		<h2 class="m0 f4">{{ post.title }}</h2>
