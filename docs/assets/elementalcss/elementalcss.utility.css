@@ -4545,6 +4545,9 @@ picture {
 .t-td-u__hover:hover {
 	text-decoration: underline;
 }
+.t-td-st {
+	text-decoration: line-through;
+}
 .t-tt-n {
 	text-transform: none;
 }
@@ -4584,6 +4587,9 @@ picture {
 	.t\:t-td-u__hover:hover {
 		text-decoration: underline;
 	}
+	.t\:t-td-st {
+		text-decoration: line-through;
+	}
 	.t\:t-tt-n {
 		text-transform: none;
 	}
@@ -4622,6 +4628,9 @@ picture {
 	}
 	.d\:t-td-u__hover:hover {
 		text-decoration: underline;
+	}
+	.d\:t-td-st {
+		text-decoration: line-through;
 	}
 	.d\:t-tt-n {
 		text-transform: none;
