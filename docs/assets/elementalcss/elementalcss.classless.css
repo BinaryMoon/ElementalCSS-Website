@@ -52,6 +52,7 @@
 	--font-arial-black: Arial Black, Arial Bold, Gadget, sans-serif;
 	--font-arial-narrow: Arial Narrow, Arial, sans-serif;
 	--font-arial-rounded: Arial Rounded MT Bold, Arial Rounded Bold, Helvetica Rounded, Arial, sans-serif;
+	--font-avenir: avenir next, avenir, sans-serif;
 	--font-baskerville: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif;
 	--font-book-antiqua: Book Antiqua, Palatino, Palatino Linotype, Palatino LT STD, Bitstream Charter, URW Palladio, Georgia, serif;
 	--font-bookman: Bookman, Bookman Old Style, Book Antiqua, Palatino, URW Bookman, serif;
@@ -84,7 +85,7 @@
 	--font-verdana: Verdana, Geneva, DejaVu Sans, sans-serif;
 	--font-main: var( --font-system );
 	--font-monospace: var( --font-system-monospace );
-	--line-length: 55ch;
+	--line-length: 60ch;
 }
 
 .font-arial {
@@ -101,6 +102,10 @@
 
 .font-arial-rounded {
 	font-family: var(--font-arial-rounded);
+}
+
+.font-avenir {
+	font-family: var(--font-avenir);
 }
 
 .font-baskerville {
@@ -314,7 +319,7 @@ figcaption > :last-child {
 html {
 	height: 100%;
 	font-size: 16px;
-	accent-color: var(--color-fg-accent);
+	accent-color: var(--color-bg-accent);
 	scroll-behavior: smooth;
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
@@ -337,6 +342,7 @@ body {
 
 body,
 p,
+h1, h2, h3, h4,
 figure,
 blockquote,
 dl,
@@ -445,27 +451,27 @@ picture {
 .f-fs-n {
 	font-style: normal;
 }
-.f-s1, .f1 {
+.f1 {
 	font-size: var(--type-size-1);
 	line-height: var(--type-lh-1);
 }
-.f-s2, .f2, h1 {
+.f2, h1 {
 	font-size: var(--type-size-2);
 	line-height: var(--type-lh-1);
 }
-.f-s3, .f3, h2 {
+.f3, h2 {
 	font-size: var(--type-size-3);
 	line-height: var(--type-lh-1);
 }
-.f-s4, .f4, h3, .screen-reader-text:focus {
+.f4, h3, .screen-reader-text:focus {
 	font-size: var(--type-size-4);
 	line-height: var(--type-lh-2);
 }
-.f-s5, .f5, h4 {
+.f5, h4 {
 	font-size: var(--type-size-5);
 	line-height: var(--type-lh-2);
 }
-.f-s6, .f6, sub,
+.f6, sub,
 sup, small, h6, h5 {
 	font-size: var(--type-size-6);
 	line-height: var(--type-lh-2);
@@ -506,27 +512,27 @@ sup, small, h6, h5 {
 	.t\:f-fs-n {
 		font-style: normal;
 	}
-	.t\:f-s1, .t\:f1 {
+	.t\:f1 {
 		font-size: var(--type-size-1);
 		line-height: var(--type-lh-1);
 	}
-	.t\:f-s2, .t\:f2 {
+	.t\:f2 {
 		font-size: var(--type-size-2);
 		line-height: var(--type-lh-1);
 	}
-	.t\:f-s3, .t\:f3 {
+	.t\:f3 {
 		font-size: var(--type-size-3);
 		line-height: var(--type-lh-1);
 	}
-	.t\:f-s4, .t\:f4 {
+	.t\:f4 {
 		font-size: var(--type-size-4);
 		line-height: var(--type-lh-2);
 	}
-	.t\:f-s5, .t\:f5 {
+	.t\:f5 {
 		font-size: var(--type-size-5);
 		line-height: var(--type-lh-2);
 	}
-	.t\:f-s6, .t\:f6 {
+	.t\:f6 {
 		font-size: var(--type-size-6);
 		line-height: var(--type-lh-2);
 		letter-spacing: var(--type-ls-1);
@@ -566,27 +572,27 @@ sup, small, h6, h5 {
 	.d\:f-fs-n {
 		font-style: normal;
 	}
-	.d\:f-s1, .d\:f1 {
+	.d\:f1 {
 		font-size: var(--type-size-1);
 		line-height: var(--type-lh-1);
 	}
-	.d\:f-s2, .d\:f2 {
+	.d\:f2 {
 		font-size: var(--type-size-2);
 		line-height: var(--type-lh-1);
 	}
-	.d\:f-s3, .d\:f3 {
+	.d\:f3 {
 		font-size: var(--type-size-3);
 		line-height: var(--type-lh-1);
 	}
-	.d\:f-s4, .d\:f4 {
+	.d\:f4 {
 		font-size: var(--type-size-4);
 		line-height: var(--type-lh-2);
 	}
-	.d\:f-s5, .d\:f5 {
+	.d\:f5 {
 		font-size: var(--type-size-5);
 		line-height: var(--type-lh-2);
 	}
-	.d\:f-s6, .d\:f6 {
+	.d\:f6 {
 		font-size: var(--type-size-6);
 		line-height: var(--type-lh-2);
 		letter-spacing: var(--type-ls-1);
@@ -739,9 +745,8 @@ hr {
 input,
 select,
 textarea {
-	background: var(--color-pop);
-	color: inherit;
-	border: var(--border-width) solid var(--color-border);
+	border-style: solid;
+	border-width: var(--border-width);
 }
 
 input,
@@ -753,6 +758,7 @@ textarea {
 	border-radius: var(--border-radius);
 	line-height: var(--type-lh-2);
 	padding: var(--size-1) var(--size-3);
+	max-width: 100%;
 }
 input:active:invalid, input:focus:invalid,
 button:active:invalid,
@@ -801,6 +807,42 @@ textarea {
 	height: 10px;
 }
 
+[type=color] {
+	padding: 0;
+	border: none;
+}
+
+[type=file] {
+	border: none;
+	padding: 0;
+}
+
+.dropzone[type=file] {
+	width: 100%;
+	border: var(--size-2) dashed currentColor;
+	padding: var(--size-4);
+	border-radius: var(--size-2);
+}
+
+::file-selector-button {
+	font: inherit;
+	padding: var(--size-1) var(--size-3);
+	margin-inline-end: var(--size-3);
+}
+::file-selector-button:hover {
+	cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+	font: inherit;
+	-webkit-appearance: button;
+	padding: var(--size-1) var(--size-3);
+	margin-inline-end: var(--size-3);
+}
+::-webkit-file-upload-button:hover {
+	cursor: pointer;
+}
+
 label {
 	font-weight: bold;
 	display: block;
@@ -844,7 +886,6 @@ nav ul {
 	padding: 0;
 }
 nav ul ul {
-	-webkit-padding-start: var(--size-3);
 	padding-inline-start: var(--size-3);
 }
 
