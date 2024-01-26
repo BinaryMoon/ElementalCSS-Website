@@ -1,6 +1,6 @@
 ---
 title: Grid Columns
-type: layout
+type: grid
 description: Use `grid-cols{n}` to specify the number of equal size grid columns.
 ---
 <div class="grid grid-cols1 bg-black m-b3 b-br2 p3 gap2">

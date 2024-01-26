@@ -1,6 +1,6 @@
 ---
 title: Grid Column Patterns
-type: layout
+type: grid
 description: Use `grid-{name}` to specify different grid layouts using compound grids.
 ---
 <div class="grid grid-hydrogen bg-black m-b3 b-br2 p3 gap2">

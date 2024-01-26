@@ -1,6 +1,6 @@
 ---
 title: Grid Column Gap
-type: layout
+type: grid
 ---
 <div class="grid grid-cols3 bg-black m-b3 b-br2 p3 gap1">
 	<div class="b-br1 bg-yellow p3">01</div>

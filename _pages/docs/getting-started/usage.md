@@ -15,10 +15,9 @@ The easiest way to use ElementalCSS is to link to the CDN. This will give you th
 
 You can use the following urls to link ElementalCSS from the CDN.
 
- * https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.min.css
- * https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.classless.min.css
- * https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.utility.min.css
-
+ * [https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.min.css]()
+ * [https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.classless.min.css]()
+ * [https://cdn.jsdelivr.net/gh/BinaryMoon/ElementalCSS/dist/elementalcss.utility.min.css]()
 
 ## Download
 
