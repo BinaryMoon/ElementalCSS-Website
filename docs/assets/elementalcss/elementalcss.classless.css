@@ -240,6 +240,7 @@
 	--size-7: calc(var(--size-base) * 64);
 	--size-8: calc(var(--size-base) * 128);
 	--size-9: calc(var(--size-base) * 256);
+	--size-10: calc(var(--size-base) * 512);
 }
 @media only screen and (min-width: 32em) {
 	:root {
