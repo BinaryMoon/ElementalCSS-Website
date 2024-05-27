@@ -32,6 +32,7 @@
 	--color-link: var( --color-blue-dark );
 	--color-border: var( --color-gray1 );
 	--color-code: var( --color-green );
+	--color-bg-code: var( --color-white );
 }
 
 /* Dark theme */
@@ -45,9 +46,25 @@
 		--color-link: var( --color-yellow );
 		--color-border: var( --color-gray3 );
 		--color-code: var( --color-green );
+		--color-bg-code: var( --color-gray4 );
 	}
 }
 :root {
+	--font-system-ui: system-ui, sans-serif;
+	--font-transitional: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+	--font-old-style: Iowan Old Style, Palatino Linotype, URW Palladio L, P052, serif;
+	--font-humanist: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+	--font-geometric-humanist: Avenir, Montserrat, Corbel, URW Gothic, source-sans-pro, sans-serif;
+	--font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+	--font-neo-grotesque: Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif;
+	--font-monospace-slab-serif: Nimbus Mono PS, Courier New, monospace;
+	--font-monospace-code: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+	--font-industrial: Bahnschrift, DIN Alternate, Franklin Gothic Medium, Nimbus Sans Narrow, sans-serif-condensed, sans-serif;
+	--font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand, Comfortaa, Manjari, Arial Rounded MT, Arial Rounded MT Bold, Calibri, source-sans-pro, sans-serif;
+	--font-slab-serif: Rockwell, Rockwell Nova, Roboto Slab, DejaVu Serif, Sitka Small, serif;
+	--font-antique: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia, serif;
+	--font-didone: Didot, Bodoni MT, Noto Serif Display, URW Palladio L, P052, Sylfaen, serif;
+	--font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
 	--font-arial: Arial, Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
 	--font-arial-black: Arial Black, Arial Bold, Gadget, sans-serif;
 	--font-arial-narrow: Arial Narrow, Arial, sans-serif;
@@ -85,6 +102,66 @@
 	--font-main: var( --font-system );
 	--font-monospace: var( --font-system-monospace );
 	--line-length: 60ch;
+}
+
+.font-system-ui {
+	font-family: var(--font-system-ui);
+}
+
+.font-transitional {
+	font-family: var(--font-transitional);
+}
+
+.font-old-style {
+	font-family: var(--font-old-style);
+}
+
+.font-humanist {
+	font-family: var(--font-humanist);
+}
+
+.font-geometric-humanist {
+	font-family: var(--font-geometric-humanist);
+}
+
+.font-classical-humanist {
+	font-family: var(--font-classical-humanist);
+}
+
+.font-neo-grotesque {
+	font-family: var(--font-neo-grotesque);
+}
+
+.font-monospace-slab-serif {
+	font-family: var(--font-monospace-slab-serif);
+}
+
+.font-monospace-code {
+	font-family: var(--font-monospace-code);
+}
+
+.font-industrial {
+	font-family: var(--font-industrial);
+}
+
+.font-rounded-sans {
+	font-family: var(--font-rounded-sans);
+}
+
+.font-slab-serif {
+	font-family: var(--font-slab-serif);
+}
+
+.font-antique {
+	font-family: var(--font-antique);
+}
+
+.font-didone {
+	font-family: var(--font-didone);
+}
+
+.font-handwritten {
+	font-family: var(--font-handwritten);
 }
 
 .font-arial {
@@ -236,6 +313,10 @@
 	--size-8: calc(var(--size-base) * 128);
 	--size-9: calc(var(--size-base) * 256);
 	--size-10: calc(var(--size-base) * 512);
+	--size-100: 100%;
+	--size-120: 120px;
+	--size-160: 160px;
+	--size-300: 300px;
 }
 @media only screen and (min-width: 32em) {
 	:root {
@@ -389,7 +470,6 @@ picture {
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	position: absolute !important;
 	padding: 0;
@@ -783,9 +863,6 @@ textarea {
 		width: 60%;
 	}
 }
-textarea:not([rows]) {
-	height: var(--size-5);
-}
 
 /* Ensures the checkbox and radio inputs do not have a set width like other input fields */
 [type=checkbox],
@@ -924,7 +1001,7 @@ kbd,
 samp {
 	font-family: var(--font-monospace);
 	color: var(--color-code);
-	background: white;
+	background: var(--color-bg-code);
 	padding: var(--size-1) var(--size-2);
 	border-radius: var(--size-1);
 }

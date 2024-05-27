@@ -32,6 +32,7 @@
 	--color-link: var( --color-blue-dark );
 	--color-border: var( --color-gray1 );
 	--color-code: var( --color-green );
+	--color-bg-code: var( --color-white );
 }
 
 /* Dark theme */
@@ -45,9 +46,25 @@
 		--color-link: var( --color-yellow );
 		--color-border: var( --color-gray3 );
 		--color-code: var( --color-green );
+		--color-bg-code: var( --color-gray4 );
 	}
 }
 :root {
+	--font-system-ui: system-ui, sans-serif;
+	--font-transitional: Charter, Bitstream Charter, Sitka Text, Cambria, serif;
+	--font-old-style: Iowan Old Style, Palatino Linotype, URW Palladio L, P052, serif;
+	--font-humanist: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+	--font-geometric-humanist: Avenir, Montserrat, Corbel, URW Gothic, source-sans-pro, sans-serif;
+	--font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+	--font-neo-grotesque: Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif;
+	--font-monospace-slab-serif: Nimbus Mono PS, Courier New, monospace;
+	--font-monospace-code: ui-monospace, Cascadia Code, Source Code Pro, Menlo, Consolas, DejaVu Sans Mono, monospace;
+	--font-industrial: Bahnschrift, DIN Alternate, Franklin Gothic Medium, Nimbus Sans Narrow, sans-serif-condensed, sans-serif;
+	--font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand, Comfortaa, Manjari, Arial Rounded MT, Arial Rounded MT Bold, Calibri, source-sans-pro, sans-serif;
+	--font-slab-serif: Rockwell, Rockwell Nova, Roboto Slab, DejaVu Serif, Sitka Small, serif;
+	--font-antique: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia, serif;
+	--font-didone: Didot, Bodoni MT, Noto Serif Display, URW Palladio L, P052, Sylfaen, serif;
+	--font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
 	--font-arial: Arial, Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
 	--font-arial-black: Arial Black, Arial Bold, Gadget, sans-serif;
 	--font-arial-narrow: Arial Narrow, Arial, sans-serif;
@@ -85,6 +102,66 @@
 	--font-main: var( --font-system );
 	--font-monospace: var( --font-system-monospace );
 	--line-length: 60ch;
+}
+
+.font-system-ui {
+	font-family: var(--font-system-ui);
+}
+
+.font-transitional {
+	font-family: var(--font-transitional);
+}
+
+.font-old-style {
+	font-family: var(--font-old-style);
+}
+
+.font-humanist {
+	font-family: var(--font-humanist);
+}
+
+.font-geometric-humanist {
+	font-family: var(--font-geometric-humanist);
+}
+
+.font-classical-humanist {
+	font-family: var(--font-classical-humanist);
+}
+
+.font-neo-grotesque {
+	font-family: var(--font-neo-grotesque);
+}
+
+.font-monospace-slab-serif {
+	font-family: var(--font-monospace-slab-serif);
+}
+
+.font-monospace-code {
+	font-family: var(--font-monospace-code);
+}
+
+.font-industrial {
+	font-family: var(--font-industrial);
+}
+
+.font-rounded-sans {
+	font-family: var(--font-rounded-sans);
+}
+
+.font-slab-serif {
+	font-family: var(--font-slab-serif);
+}
+
+.font-antique {
+	font-family: var(--font-antique);
+}
+
+.font-didone {
+	font-family: var(--font-didone);
+}
+
+.font-handwritten {
+	font-family: var(--font-handwritten);
 }
 
 .font-arial {
@@ -236,6 +313,10 @@
 	--size-8: calc(var(--size-base) * 128);
 	--size-9: calc(var(--size-base) * 256);
 	--size-10: calc(var(--size-base) * 512);
+	--size-100: 100%;
+	--size-120: 120px;
+	--size-160: 160px;
+	--size-300: 300px;
 }
 @media only screen and (min-width: 32em) {
 	:root {
@@ -385,11 +466,336 @@ picture {
 		scroll-behavior: auto;
 	}
 }
+/**
+ * Colours
+ */
+.bg-custom {
+	background-color: var(--bg-custom) !important;
+}
+.bg-custom__hover:hover {
+	background-color: var(--bg-custom--hover) !important;
+}
+.bg-transparent {
+	background-color: transparent;
+}
+.bg-black {
+	background-color: var(--color-black);
+	color: white;
+}
+.bg-black__hover:hover {
+	background-color: var(--color-black);
+	color: white;
+}
+.bg-black a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-gray4 {
+	background-color: var(--color-gray4);
+	color: white;
+}
+.bg-gray4__hover:hover {
+	background-color: var(--color-gray4);
+	color: white;
+}
+.bg-gray4 a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-gray3 {
+	background-color: var(--color-gray3);
+	color: white;
+}
+.bg-gray3__hover:hover {
+	background-color: var(--color-gray3);
+	color: white;
+}
+.bg-gray3 a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-gray2 {
+	background-color: var(--color-gray2);
+	color: white;
+}
+.bg-gray2__hover:hover {
+	background-color: var(--color-gray2);
+	color: white;
+}
+.bg-gray2 a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-gray1 {
+	background-color: var(--color-gray1);
+	color: black;
+}
+.bg-gray1__hover:hover {
+	background-color: var(--color-gray1);
+	color: black;
+}
+.bg-gray1 a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-white {
+	background-color: var(--color-white);
+	color: black;
+}
+.bg-white__hover:hover {
+	background-color: var(--color-white);
+	color: black;
+}
+.bg-white a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-blue-light {
+	background-color: var(--color-blue-light);
+	color: black;
+}
+.bg-blue-light__hover:hover {
+	background-color: var(--color-blue-light);
+	color: black;
+}
+.bg-blue-light a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-blue {
+	background-color: var(--color-blue);
+	color: white;
+}
+.bg-blue__hover:hover {
+	background-color: var(--color-blue);
+	color: white;
+}
+.bg-blue a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-blue-dark {
+	background-color: var(--color-blue-dark);
+	color: white;
+}
+.bg-blue-dark__hover:hover {
+	background-color: var(--color-blue-dark);
+	color: white;
+}
+.bg-blue-dark a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-red-light {
+	background-color: var(--color-red-light);
+	color: black;
+}
+.bg-red-light__hover:hover {
+	background-color: var(--color-red-light);
+	color: black;
+}
+.bg-red-light a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-red {
+	background-color: var(--color-red);
+	color: white;
+}
+.bg-red__hover:hover {
+	background-color: var(--color-red);
+	color: white;
+}
+.bg-red a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-red-dark {
+	background-color: var(--color-red-dark);
+	color: white;
+}
+.bg-red-dark__hover:hover {
+	background-color: var(--color-red-dark);
+	color: white;
+}
+.bg-red-dark a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-green-light {
+	background-color: var(--color-green-light);
+	color: black;
+}
+.bg-green-light__hover:hover {
+	background-color: var(--color-green-light);
+	color: black;
+}
+.bg-green-light a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-green {
+	background-color: var(--color-green);
+	color: white;
+}
+.bg-green__hover:hover {
+	background-color: var(--color-green);
+	color: white;
+}
+.bg-green a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-green-dark {
+	background-color: var(--color-green-dark);
+	color: white;
+}
+.bg-green-dark__hover:hover {
+	background-color: var(--color-green-dark);
+	color: white;
+}
+.bg-green-dark a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+.bg-yellow-light {
+	background-color: var(--color-yellow-light);
+	color: black;
+}
+.bg-yellow-light__hover:hover {
+	background-color: var(--color-yellow-light);
+	color: black;
+}
+.bg-yellow-light a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-yellow {
+	background-color: var(--color-yellow);
+	color: black;
+}
+.bg-yellow__hover:hover {
+	background-color: var(--color-yellow);
+	color: black;
+}
+.bg-yellow a:not([class*=fg-]) {
+	color: var(--color-blue-dark);
+}
+.bg-yellow-dark {
+	background-color: var(--color-yellow-dark);
+	color: white;
+}
+.bg-yellow-dark__hover:hover {
+	background-color: var(--color-yellow-dark);
+	color: white;
+}
+.bg-yellow-dark a:not([class*=fg-]) {
+	color: var(--color-yellow);
+}
+
+.fg-current {
+	color: currentColor;
+}
+.fg-custom {
+	color: var(--fg-custom) !important;
+}
+.fg-black {
+	color: var(--color-black);
+}
+.fg-black__hover:hover {
+	color: var(--color-black);
+}
+.fg-gray4 {
+	color: var(--color-gray4);
+}
+.fg-gray4__hover:hover {
+	color: var(--color-gray4);
+}
+.fg-gray3 {
+	color: var(--color-gray3);
+}
+.fg-gray3__hover:hover {
+	color: var(--color-gray3);
+}
+.fg-gray2 {
+	color: var(--color-gray2);
+}
+.fg-gray2__hover:hover {
+	color: var(--color-gray2);
+}
+.fg-gray1 {
+	color: var(--color-gray1);
+}
+.fg-gray1__hover:hover {
+	color: var(--color-gray1);
+}
+.fg-white {
+	color: var(--color-white);
+}
+.fg-white__hover:hover {
+	color: var(--color-white);
+}
+.fg-blue-light {
+	color: var(--color-blue-light);
+}
+.fg-blue-light__hover:hover {
+	color: var(--color-blue-light);
+}
+.fg-blue {
+	color: var(--color-blue);
+}
+.fg-blue__hover:hover {
+	color: var(--color-blue);
+}
+.fg-blue-dark {
+	color: var(--color-blue-dark);
+}
+.fg-blue-dark__hover:hover {
+	color: var(--color-blue-dark);
+}
+.fg-red-light {
+	color: var(--color-red-light);
+}
+.fg-red-light__hover:hover {
+	color: var(--color-red-light);
+}
+.fg-red {
+	color: var(--color-red);
+}
+.fg-red__hover:hover {
+	color: var(--color-red);
+}
+.fg-red-dark {
+	color: var(--color-red-dark);
+}
+.fg-red-dark__hover:hover {
+	color: var(--color-red-dark);
+}
+.fg-green-light {
+	color: var(--color-green-light);
+}
+.fg-green-light__hover:hover {
+	color: var(--color-green-light);
+}
+.fg-green {
+	color: var(--color-green);
+}
+.fg-green__hover:hover {
+	color: var(--color-green);
+}
+.fg-green-dark {
+	color: var(--color-green-dark);
+}
+.fg-green-dark__hover:hover {
+	color: var(--color-green-dark);
+}
+.fg-yellow-light {
+	color: var(--color-yellow-light);
+}
+.fg-yellow-light__hover:hover {
+	color: var(--color-yellow-light);
+}
+.fg-yellow {
+	color: var(--color-yellow);
+}
+.fg-yellow__hover:hover {
+	color: var(--color-yellow);
+}
+.fg-yellow-dark {
+	color: var(--color-yellow-dark);
+}
+.fg-yellow-dark__hover:hover {
+	color: var(--color-yellow-dark);
+}
+
 /* Screen Reader Text: meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	position: absolute !important;
 	padding: 0;
@@ -1151,332 +1557,6 @@ picture {
 		border-left-width: var(--size-3);
 	}
 }
-/**
- * Colours
- */
-.bg-custom {
-	background-color: var(--bg-custom) !important;
-}
-.bg-custom__hover:hover {
-	background-color: var(--bg-custom--hover) !important;
-}
-.bg-transparent {
-	background-color: transparent;
-}
-.bg-black {
-	background-color: var(--color-black);
-	color: white;
-}
-.bg-black__hover:hover {
-	background-color: var(--color-black);
-	color: white;
-}
-.bg-black a {
-	color: var(--color-yellow);
-}
-.bg-gray4 {
-	background-color: var(--color-gray4);
-	color: white;
-}
-.bg-gray4__hover:hover {
-	background-color: var(--color-gray4);
-	color: white;
-}
-.bg-gray4 a {
-	color: var(--color-yellow);
-}
-.bg-gray3 {
-	background-color: var(--color-gray3);
-	color: white;
-}
-.bg-gray3__hover:hover {
-	background-color: var(--color-gray3);
-	color: white;
-}
-.bg-gray3 a {
-	color: var(--color-yellow);
-}
-.bg-gray2 {
-	background-color: var(--color-gray2);
-	color: white;
-}
-.bg-gray2__hover:hover {
-	background-color: var(--color-gray2);
-	color: white;
-}
-.bg-gray2 a {
-	color: var(--color-yellow);
-}
-.bg-gray1 {
-	background-color: var(--color-gray1);
-	color: black;
-}
-.bg-gray1__hover:hover {
-	background-color: var(--color-gray1);
-	color: black;
-}
-.bg-gray1 a {
-	color: var(--color-blue-dark);
-}
-.bg-white {
-	background-color: var(--color-white);
-	color: black;
-}
-.bg-white__hover:hover {
-	background-color: var(--color-white);
-	color: black;
-}
-.bg-white a {
-	color: var(--color-blue-dark);
-}
-.bg-blue-light {
-	background-color: var(--color-blue-light);
-	color: black;
-}
-.bg-blue-light__hover:hover {
-	background-color: var(--color-blue-light);
-	color: black;
-}
-.bg-blue-light a {
-	color: var(--color-blue-dark);
-}
-.bg-blue {
-	background-color: var(--color-blue);
-	color: white;
-}
-.bg-blue__hover:hover {
-	background-color: var(--color-blue);
-	color: white;
-}
-.bg-blue a {
-	color: var(--color-yellow);
-}
-.bg-blue-dark {
-	background-color: var(--color-blue-dark);
-	color: white;
-}
-.bg-blue-dark__hover:hover {
-	background-color: var(--color-blue-dark);
-	color: white;
-}
-.bg-blue-dark a {
-	color: var(--color-yellow);
-}
-.bg-red-light {
-	background-color: var(--color-red-light);
-	color: black;
-}
-.bg-red-light__hover:hover {
-	background-color: var(--color-red-light);
-	color: black;
-}
-.bg-red-light a {
-	color: var(--color-blue-dark);
-}
-.bg-red {
-	background-color: var(--color-red);
-	color: white;
-}
-.bg-red__hover:hover {
-	background-color: var(--color-red);
-	color: white;
-}
-.bg-red a {
-	color: var(--color-yellow);
-}
-.bg-red-dark {
-	background-color: var(--color-red-dark);
-	color: white;
-}
-.bg-red-dark__hover:hover {
-	background-color: var(--color-red-dark);
-	color: white;
-}
-.bg-red-dark a {
-	color: var(--color-yellow);
-}
-.bg-green-light {
-	background-color: var(--color-green-light);
-	color: black;
-}
-.bg-green-light__hover:hover {
-	background-color: var(--color-green-light);
-	color: black;
-}
-.bg-green-light a {
-	color: var(--color-blue-dark);
-}
-.bg-green {
-	background-color: var(--color-green);
-	color: white;
-}
-.bg-green__hover:hover {
-	background-color: var(--color-green);
-	color: white;
-}
-.bg-green a {
-	color: var(--color-yellow);
-}
-.bg-green-dark {
-	background-color: var(--color-green-dark);
-	color: white;
-}
-.bg-green-dark__hover:hover {
-	background-color: var(--color-green-dark);
-	color: white;
-}
-.bg-green-dark a {
-	color: var(--color-yellow);
-}
-.bg-yellow-light {
-	background-color: var(--color-yellow-light);
-	color: black;
-}
-.bg-yellow-light__hover:hover {
-	background-color: var(--color-yellow-light);
-	color: black;
-}
-.bg-yellow-light a {
-	color: var(--color-blue-dark);
-}
-.bg-yellow {
-	background-color: var(--color-yellow);
-	color: black;
-}
-.bg-yellow__hover:hover {
-	background-color: var(--color-yellow);
-	color: black;
-}
-.bg-yellow a {
-	color: var(--color-blue-dark);
-}
-.bg-yellow-dark {
-	background-color: var(--color-yellow-dark);
-	color: white;
-}
-.bg-yellow-dark__hover:hover {
-	background-color: var(--color-yellow-dark);
-	color: white;
-}
-.bg-yellow-dark a {
-	color: var(--color-yellow);
-}
-
-.fg-current {
-	color: currentColor;
-}
-.fg-custom {
-	color: var(--fg-custom) !important;
-}
-.fg-black {
-	color: var(--color-black);
-}
-.fg-black__hover:hover {
-	color: var(--color-black);
-}
-.fg-gray4 {
-	color: var(--color-gray4);
-}
-.fg-gray4__hover:hover {
-	color: var(--color-gray4);
-}
-.fg-gray3 {
-	color: var(--color-gray3);
-}
-.fg-gray3__hover:hover {
-	color: var(--color-gray3);
-}
-.fg-gray2 {
-	color: var(--color-gray2);
-}
-.fg-gray2__hover:hover {
-	color: var(--color-gray2);
-}
-.fg-gray1 {
-	color: var(--color-gray1);
-}
-.fg-gray1__hover:hover {
-	color: var(--color-gray1);
-}
-.fg-white {
-	color: var(--color-white);
-}
-.fg-white__hover:hover {
-	color: var(--color-white);
-}
-.fg-blue-light {
-	color: var(--color-blue-light);
-}
-.fg-blue-light__hover:hover {
-	color: var(--color-blue-light);
-}
-.fg-blue {
-	color: var(--color-blue);
-}
-.fg-blue__hover:hover {
-	color: var(--color-blue);
-}
-.fg-blue-dark {
-	color: var(--color-blue-dark);
-}
-.fg-blue-dark__hover:hover {
-	color: var(--color-blue-dark);
-}
-.fg-red-light {
-	color: var(--color-red-light);
-}
-.fg-red-light__hover:hover {
-	color: var(--color-red-light);
-}
-.fg-red {
-	color: var(--color-red);
-}
-.fg-red__hover:hover {
-	color: var(--color-red);
-}
-.fg-red-dark {
-	color: var(--color-red-dark);
-}
-.fg-red-dark__hover:hover {
-	color: var(--color-red-dark);
-}
-.fg-green-light {
-	color: var(--color-green-light);
-}
-.fg-green-light__hover:hover {
-	color: var(--color-green-light);
-}
-.fg-green {
-	color: var(--color-green);
-}
-.fg-green__hover:hover {
-	color: var(--color-green);
-}
-.fg-green-dark {
-	color: var(--color-green-dark);
-}
-.fg-green-dark__hover:hover {
-	color: var(--color-green-dark);
-}
-.fg-yellow-light {
-	color: var(--color-yellow-light);
-}
-.fg-yellow-light__hover:hover {
-	color: var(--color-yellow-light);
-}
-.fg-yellow {
-	color: var(--color-yellow);
-}
-.fg-yellow__hover:hover {
-	color: var(--color-yellow);
-}
-.fg-yellow-dark {
-	color: var(--color-yellow-dark);
-}
-.fg-yellow-dark__hover:hover {
-	color: var(--color-yellow-dark);
-}
-
 .cols0 {
 	-moz-column-count: 0;
 	column-count: 0;
@@ -4814,6 +4894,30 @@ picture {
 	width: 100vw;
 }
 .w100 {
+	width: var(--size-100);
+}
+.w120 {
+	width: var(--size-120);
+}
+.w160 {
+	width: var(--size-160);
+}
+.w300 {
+	width: var(--size-300);
+}
+.w100 {
+	width: var(--size-100);
+}
+.w120 {
+	width: var(--size-120);
+}
+.w160 {
+	width: var(--size-160);
+}
+.w300 {
+	width: var(--size-300);
+}
+.w100 {
 	width: 100%;
 }
 .w1 {
@@ -4877,6 +4981,30 @@ picture {
 	}
 	.t\:w-screen {
 		width: 100vw;
+	}
+	.t\:w100 {
+		width: var(--size-100);
+	}
+	.t\:w120 {
+		width: var(--size-120);
+	}
+	.t\:w160 {
+		width: var(--size-160);
+	}
+	.t\:w300 {
+		width: var(--size-300);
+	}
+	.t\:w100 {
+		width: var(--size-100);
+	}
+	.t\:w120 {
+		width: var(--size-120);
+	}
+	.t\:w160 {
+		width: var(--size-160);
+	}
+	.t\:w300 {
+		width: var(--size-300);
 	}
 	.t\:w100 {
 		width: 100%;
@@ -4944,6 +5072,30 @@ picture {
 		width: 100vw;
 	}
 	.d\:w100 {
+		width: var(--size-100);
+	}
+	.d\:w120 {
+		width: var(--size-120);
+	}
+	.d\:w160 {
+		width: var(--size-160);
+	}
+	.d\:w300 {
+		width: var(--size-300);
+	}
+	.d\:w100 {
+		width: var(--size-100);
+	}
+	.d\:w120 {
+		width: var(--size-120);
+	}
+	.d\:w160 {
+		width: var(--size-160);
+	}
+	.d\:w300 {
+		width: var(--size-300);
+	}
+	.d\:w100 {
 		width: 100%;
 	}
 	.d\:w1 {
@@ -5006,6 +5158,30 @@ picture {
 }
 .mw-screen {
 	max-width: 100vw;
+}
+.mw100 {
+	max-width: var(--size-100);
+}
+.mw120 {
+	max-width: var(--size-120);
+}
+.mw160 {
+	max-width: var(--size-160);
+}
+.mw300 {
+	max-width: var(--size-300);
+}
+.mw100 {
+	max-width: var(--size-100);
+}
+.mw120 {
+	max-width: var(--size-120);
+}
+.mw160 {
+	max-width: var(--size-160);
+}
+.mw300 {
+	max-width: var(--size-300);
 }
 .mw100 {
 	max-width: 100%;
@@ -5073,6 +5249,30 @@ picture {
 		max-width: 100vw;
 	}
 	.t\:mw100 {
+		max-width: var(--size-100);
+	}
+	.t\:mw120 {
+		max-width: var(--size-120);
+	}
+	.t\:mw160 {
+		max-width: var(--size-160);
+	}
+	.t\:mw300 {
+		max-width: var(--size-300);
+	}
+	.t\:mw100 {
+		max-width: var(--size-100);
+	}
+	.t\:mw120 {
+		max-width: var(--size-120);
+	}
+	.t\:mw160 {
+		max-width: var(--size-160);
+	}
+	.t\:mw300 {
+		max-width: var(--size-300);
+	}
+	.t\:mw100 {
 		max-width: 100%;
 	}
 	.t\:mw1 {
@@ -5138,6 +5338,30 @@ picture {
 		max-width: 100vw;
 	}
 	.d\:mw100 {
+		max-width: var(--size-100);
+	}
+	.d\:mw120 {
+		max-width: var(--size-120);
+	}
+	.d\:mw160 {
+		max-width: var(--size-160);
+	}
+	.d\:mw300 {
+		max-width: var(--size-300);
+	}
+	.d\:mw100 {
+		max-width: var(--size-100);
+	}
+	.d\:mw120 {
+		max-width: var(--size-120);
+	}
+	.d\:mw160 {
+		max-width: var(--size-160);
+	}
+	.d\:mw300 {
+		max-width: var(--size-300);
+	}
+	.d\:mw100 {
 		max-width: 100%;
 	}
 	.d\:mw1 {
@@ -5200,6 +5424,30 @@ picture {
 }
 .h-screen {
 	height: 100vw;
+}
+.h100 {
+	height: var(--size-100);
+}
+.h120 {
+	height: var(--size-120);
+}
+.h160 {
+	height: var(--size-160);
+}
+.h300 {
+	height: var(--size-300);
+}
+.h100 {
+	height: var(--size-100);
+}
+.h120 {
+	height: var(--size-120);
+}
+.h160 {
+	height: var(--size-160);
+}
+.h300 {
+	height: var(--size-300);
 }
 .h100 {
 	height: 100%;
@@ -5267,6 +5515,30 @@ picture {
 		height: 100vw;
 	}
 	.t\:h100 {
+		height: var(--size-100);
+	}
+	.t\:h120 {
+		height: var(--size-120);
+	}
+	.t\:h160 {
+		height: var(--size-160);
+	}
+	.t\:h300 {
+		height: var(--size-300);
+	}
+	.t\:h100 {
+		height: var(--size-100);
+	}
+	.t\:h120 {
+		height: var(--size-120);
+	}
+	.t\:h160 {
+		height: var(--size-160);
+	}
+	.t\:h300 {
+		height: var(--size-300);
+	}
+	.t\:h100 {
 		height: 100%;
 	}
 	.t\:h1 {
@@ -5332,6 +5604,30 @@ picture {
 		height: 100vw;
 	}
 	.d\:h100 {
+		height: var(--size-100);
+	}
+	.d\:h120 {
+		height: var(--size-120);
+	}
+	.d\:h160 {
+		height: var(--size-160);
+	}
+	.d\:h300 {
+		height: var(--size-300);
+	}
+	.d\:h100 {
+		height: var(--size-100);
+	}
+	.d\:h120 {
+		height: var(--size-120);
+	}
+	.d\:h160 {
+		height: var(--size-160);
+	}
+	.d\:h300 {
+		height: var(--size-300);
+	}
+	.d\:h100 {
 		height: 100%;
 	}
 	.d\:h1 {
@@ -5394,6 +5690,30 @@ picture {
 }
 .mh-screen {
 	max-height: 100vw;
+}
+.mh100 {
+	max-height: var(--size-100);
+}
+.mh120 {
+	max-height: var(--size-120);
+}
+.mh160 {
+	max-height: var(--size-160);
+}
+.mh300 {
+	max-height: var(--size-300);
+}
+.mh100 {
+	max-height: var(--size-100);
+}
+.mh120 {
+	max-height: var(--size-120);
+}
+.mh160 {
+	max-height: var(--size-160);
+}
+.mh300 {
+	max-height: var(--size-300);
 }
 .mh100 {
 	max-height: 100%;
@@ -5461,6 +5781,30 @@ picture {
 		max-height: 100vw;
 	}
 	.t\:mh100 {
+		max-height: var(--size-100);
+	}
+	.t\:mh120 {
+		max-height: var(--size-120);
+	}
+	.t\:mh160 {
+		max-height: var(--size-160);
+	}
+	.t\:mh300 {
+		max-height: var(--size-300);
+	}
+	.t\:mh100 {
+		max-height: var(--size-100);
+	}
+	.t\:mh120 {
+		max-height: var(--size-120);
+	}
+	.t\:mh160 {
+		max-height: var(--size-160);
+	}
+	.t\:mh300 {
+		max-height: var(--size-300);
+	}
+	.t\:mh100 {
 		max-height: 100%;
 	}
 	.t\:mh1 {
@@ -5524,6 +5868,30 @@ picture {
 	}
 	.d\:mh-screen {
 		max-height: 100vw;
+	}
+	.d\:mh100 {
+		max-height: var(--size-100);
+	}
+	.d\:mh120 {
+		max-height: var(--size-120);
+	}
+	.d\:mh160 {
+		max-height: var(--size-160);
+	}
+	.d\:mh300 {
+		max-height: var(--size-300);
+	}
+	.d\:mh100 {
+		max-height: var(--size-100);
+	}
+	.d\:mh120 {
+		max-height: var(--size-120);
+	}
+	.d\:mh160 {
+		max-height: var(--size-160);
+	}
+	.d\:mh300 {
+		max-height: var(--size-300);
 	}
 	.d\:mh100 {
 		max-height: 100%;
