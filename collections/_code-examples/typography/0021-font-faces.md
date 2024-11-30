@@ -1,6 +1,7 @@
 ---
 title: Font Faces
 type: typography-classes
+description: 'These are font faces that are available on most systems. They are less reliable than the modern font stacks but can give some familiar results.'
 ---
 <p class="f4 flex flex-wrap gap4">
 <span class="font-arial">Arial</span>
