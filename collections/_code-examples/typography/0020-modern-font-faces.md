@@ -1,7 +1,7 @@
 ---
 title: Modern Font Faces
 type: typography-classes
-description: 'These are modern font stacks based on system fonts as defined by <a href="https://modernfontstacks.com/">ModerFontStacks.com</a>.'
+description: 'These are modern font stacks based on system fonts as defined by <a href="https://modernfontstacks.com/">ModernFontStacks.com</a>.'
 ---
 {% capture testString %}The Quick Brown Font Jumped over the Lazy Dog.{% endcapture %}
 <div class="f3 flex flex-col gap3">
